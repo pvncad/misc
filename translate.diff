@@ -1,18 +1,6 @@
-diff -r ec1ef8f1722d manage.py
---- a/manage.py	Thu Aug 27 00:26:22 2009 +0900
-+++ b/manage.py	Wed Aug 26 23:57:18 2009 +0530
-@@ -71,7 +71,7 @@
-     config.read(inifile)
-     profiles = [section for section in config.sections()
-                 if section.startswith("Profile")]
--    for profile in profiles:
-+    for profile in profiles:	
-         if config.get(profile, "Name") == name:
-             # TODO: Look at IsRelative?
-             path = config.get(profile, "Path")
 diff -r ec1ef8f1722d ubiquity/standard-feeds/general.js
 --- a/ubiquity/standard-feeds/general.js	Thu Aug 27 00:26:22 2009 +0900
-+++ b/ubiquity/standard-feeds/general.js	Wed Aug 26 23:57:18 2009 +0530
++++ b/ubiquity/standard-feeds/general.js	Thu Aug 27 00:26:01 2009 +0530
 @@ -269,8 +269,34 @@
    pblock ? CmdUtils.previewAjax(pblock, options) : jQuery.ajax(options);
  }
